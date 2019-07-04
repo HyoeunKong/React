@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+            <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+            <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+         
+    </head>
+    <body>
+        <div id="container"></div>
+        <script type="text/babel">
+        
+        class Buttionify extends React.Component{
+            render(){
+                return(
+                    <div>
+                        <button type={this.props.behavior}>{this.props.children}</button>
+                    </div>    
+                );
+            }
+        }
+        ReactDOM.render(
+            <div>
+                <Buttionify behavior="submit">send data</Buttionify>
+            </div>,
+            document.querySelector("#container")
+        );

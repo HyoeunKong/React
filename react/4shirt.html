@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+            <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+            <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+         
+    </head>
+    <body>
+        <div id="container"></div>
+        <script type="text/babel">
+        var dest = document.querySelector("#container")
+            class Display extends React.Component{
+                render(){
+                    return ( 
+                    <div>
+                    <p>{this.props.color}</p>
+                    <p>{this.props.num}</p>
+                    <p>{this.props.size}</p>
+                    </div>
+                    ); 
+            
+                }    
+             }
+            class Label extends React.Component{
+                render(){
+                    return ( 
+                    <Display {...this.props} />
+                    ); 
+                 }
+             }
+            class Shirt extends React.Component{
+                render(){
+                    return ( 
+                    <div>
+                    <Label {...this.props} />
+                    </div>
+                    ); 
+
+                 }    
+             }
+
+        ReactDOM.render(
+            <div>
+             <Shirt color="steelblue" num="3.14" size ="medium" />
+            </div>,
+           dest
+        );
+          
+    </script>
+</body>
+</html>

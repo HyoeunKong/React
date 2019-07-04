@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+            <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+            <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+           <style>
+           #c{
+               padding: 50px;
+               background-color: #EEE;
+            } 
+
+            #c h1{
+                font-size:144px;
+                font-family:sans-serif;
+                color: #0080a8
+            }
+            </style>
+
+
+
+    </head>
+<body>
+
+    <div id="c"></div>
+    <script type="text/babel">
+    var dest = document.querySelector("#c")
+    ReactDOM.render(
+     <div>   
+        <h1>batnam</h1>
+        <h1>batnam</h1>
+        <h1>batnam</h1>
+        <h1>batnam</h1>
+     </div>   
+     ,dest );
+     
+
+
+    </script>
+
+</body>
+</html>
